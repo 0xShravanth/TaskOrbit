@@ -3,6 +3,7 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
+/* getting project */
 export const getProjects = async (
   req: Request,
   res: Response
@@ -17,6 +18,7 @@ export const getProjects = async (
   }
 };
 
+/*create project */
 export const createProject = async (
   req: Request,
   res: Response

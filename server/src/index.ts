@@ -6,6 +6,8 @@ import helmet from "helmet";
 import morgan from "morgan";
 /* Route Imports */
 import projectRoutes from "./routes/projectRoutes";
+import searchRoutes from "./routes/searchRoutes";
+import taskRoutes from "./routes/taskRoutes";
 
 /* configuration */
 dotenv.config();
@@ -35,8 +37,8 @@ app.get("/", (req, res) => {
 });
 
 app.use("/projects", projectRoutes);
-app.use("/tasks");
-app.use("/search");
+app.use("/tasks", taskRoutes);
+app.use("/search", searchRoutes);
 app.use("/users");
 app.use("teams");
 
