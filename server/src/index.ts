@@ -5,6 +5,7 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 /* Route Imports */
+import projectRoutes from "./routes/projectRoutes";
 
 /* configuration */
 dotenv.config();
@@ -33,7 +34,7 @@ app.get("/", (req, res) => {
   res.send("this is home route");
 });
 
-app.use("/projects");
+app.use("/projects", projectRoutes);
 app.use("/tasks");
 app.use("/search");
 app.use("/users");
