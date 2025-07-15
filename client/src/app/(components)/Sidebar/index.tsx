@@ -135,7 +135,10 @@ const Sidebar = () => {
               label="Medium"
               href="/priority/medium"
             />
-            <SidebarLink icon={AlertOctagon} label="low" href="/priority/low" />
+            <SidebarLink 
+            icon={AlertOctagon} 
+            label="low" 
+            href="/priority/low" />
             <SidebarLink
               icon={AlertOctagon}
               label="Backlog"
